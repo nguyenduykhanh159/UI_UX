@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui_ux.controllers.DashboardController">
+   <children>
+      <AnchorPane prefHeight="63.0" prefWidth="800.0" style="-fx-background-color: #DDDDDD;">
+         <children>
+            <Label layoutX="250.0" layoutY="5.0" text="Trang Trại Bất Ổn">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="161.0" fitWidth="232.0" layoutX="286.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo_nong_nghiep.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="checkinButton" layoutX="293.0" layoutY="366.0" mnemonicParsing="false" onAction="#checkin" prefHeight="39.0" prefWidth="214.0" text="ĐIỂM DANH" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="workButton" layoutX="293.0" layoutY="420.0" mnemonicParsing="false" onAction="#workView" prefHeight="39.0" prefWidth="214.0" text="CÔNG VIỆC" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="logoutButton" layoutX="292.0" layoutY="474.0" mnemonicParsing="false" onAction="#logout" prefHeight="39.0" prefWidth="214.0" text="ĐĂNG XUẤT" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="infoButton" layoutX="293.0" layoutY="309.0" mnemonicParsing="false" onAction="#viewInfo" text="THÔNG TIN CÁ NHÂN" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

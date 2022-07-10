@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui_ux.controllers.ViewWorkController">
+   <children>
+      <AnchorPane prefHeight="63.0" prefWidth="950.0" style="-fx-background-color: #DDDDDD;">
+         <children>
+            <Label layoutX="325.0" layoutY="5.0" text="Trang Trại Bất Ổn">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="268.0" fitWidth="384.0" layoutX="73.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/anh_hieu.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="returnButton" layoutX="161.0" layoutY="525.0" mnemonicParsing="false" onAction="#returnDashboard" text="Quay lại" textFill="#460eeb">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="108.0" layoutY="468.0" text="Mã số : 20184096">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="workTable" layoutX="371.0" layoutY="157.0" prefHeight="327.0" prefWidth="565.0">
+        <columns>
+          <TableColumn fx:id="work" prefWidth="105.0" text="Công việc" />
+          <TableColumn fx:id="timeStart" prefWidth="108.0" text="Thời gian bắt đầu" />
+          <TableColumn fx:id="timeFinish" prefWidth="116.0" text="Thời gian kết thúc" />
+          <TableColumn fx:id="workplace" minWidth="0.0" prefWidth="88.0" text="Địa điểm" />
+          <TableColumn fx:id="description" prefWidth="147.0" text="Mô tả công việc" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="completeButton" layoutX="398.0" layoutY="105.0" mnemonicParsing="false" onAction="#viewCompleteWork" text="Đã hoàn thành">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="isCompleteGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="incompleteButton" layoutX="565.0" layoutY="105.0" mnemonicParsing="false" onAction="#viewIncompleteWork" text="Chưa hoàn thành" toggleGroup="$isCompleteGroup">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="124.0" layoutY="427.0" text="Cao Minh Hiếu">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="isCheckingButton" layoutX="748.0" layoutY="105.0" mnemonicParsing="false" onAction="#viewCheckingWork" text="Đang kiểm duyệt" toggleGroup="$isCompleteGroup">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="complete" layoutX="592.0" layoutY="506.0" mnemonicParsing="false" onAction="#changeChecking" text="Hoàn thành" textFill="#dd3a11">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

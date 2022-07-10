@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui_ux.controllers.SignInController">
+   <children>
+      <AnchorPane prefHeight="63.0" prefWidth="950.0" style="-fx-background-color: #DDDDDD;">
+         <children>
+            <Label layoutX="325.0" layoutY="5.0" text="Trang Trại Bất Ổn">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="87.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickID" prefHeight="45.0" prefWidth="45.0" text="0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="169.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickID" prefHeight="45.0" prefWidth="45.0" text="1">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="249.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickID" prefHeight="45.0" prefWidth="45.0" text="2">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="332.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickID" prefHeight="45.0" prefWidth="45.0" text="3">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="413.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickID" prefHeight="45.0" prefWidth="45.0" text="4">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="496.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickID" prefHeight="45.0" prefWidth="45.0" text="5">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="575.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickID" prefHeight="45.0" prefWidth="45.0" text="6">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="655.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickID" prefHeight="45.0" prefWidth="45.0" text="7">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="819.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickID" prefHeight="45.0" prefWidth="45.0" text="9">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="736.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickID" prefHeight="45.0" prefWidth="45.0" text="8">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <TextField fx:id="idTextField" layoutX="259.0" layoutY="332.0" prefHeight="35.0" prefWidth="432.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Label layoutX="259.0" layoutY="297.0" prefHeight="27.0" prefWidth="246.0" text="HÃY NHẬP MÃ SỐ CỦA BẠN" textFill="#ee0e0e">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="login" layoutX="422.0" layoutY="410.0" mnemonicParsing="false" onAction="#clickToLogin" style="-fx-background-color: #99FFCC;" text="Đăng Nhập" textFill="#1810eb">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="161.0" fitWidth="232.0" layoutX="368.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo_nong_nghiep.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="deleteButton" layoutX="706.0" layoutY="338.0" mnemonicParsing="false" onAction="#deleteID" text="XÓA" textFill="#eb0e0e">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
