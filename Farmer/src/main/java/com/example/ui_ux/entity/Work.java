@@ -2,6 +2,8 @@ package com.example.ui_ux.entity;
 
 public class Work {
 
+  private int id;
+
   private String work;
 
   private String timeStart;
@@ -12,7 +14,8 @@ public class Work {
 
   private String description;
 
-  public Work(String work, String timeStart, String timeFinish, String workplace, String description) {
+  public Work(int id, String work, String timeStart, String timeFinish, String workplace, String description) {
+    this.id = id;
     this.work = work;
     this.timeStart = timeStart;
     this.timeFinish = timeFinish;
@@ -20,40 +23,51 @@ public class Work {
     this.description = description;
   }
 
-  public String getWork()
-  {
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public String getWork() {
     return work;
   }
 
-  public String getTimeStart()
-  {
+  public void setWork(String work) {
+    this.work = work;
+  }
+
+  public String getTimeStart() {
     return timeStart;
   }
 
-  public String getTimeFinish()
-  {
+  public void setTimeStart(String timeStart) {
+    this.timeStart = timeStart;
+  }
+
+  public String getTimeFinish() {
     return timeFinish;
   }
 
-  public String getWorkplace()
-  {
+  public void setTimeFinish(String timeFinish) {
+    this.timeFinish = timeFinish;
+  }
+
+  public String getWorkplace() {
     return workplace;
   }
 
-  public String getDescription()
-  {
+  public void setWorkplace(String workplace) {
+    this.workplace = workplace;
+  }
+
+  public String getDescription() {
     return description;
   }
 
-  @Override
-  public String toString()
-  {
-    return "Work{" +
-      "work='" + work + '\'' +
-      ", timeStart='" + timeStart + '\'' +
-      ", timeFinish='" + timeFinish + '\'' +
-      ", workplace='" + workplace + '\'' +
-      ", description='" + description + '\'' +
-      '}';
+  public void setDescription(String description) {
+    this.description = description;
   }
 }

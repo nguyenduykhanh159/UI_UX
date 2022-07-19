@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import com.example.ui_ux.Application;
@@ -17,7 +18,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -97,11 +100,29 @@ public class ViewWorkController implements Initializable {
   @FXML
   void viewIncompleteWork(ActionEvent event) {
     setValueForTable(0);
+    complete.setDisable(false);
   }
-
+  
   @FXML
   void changeChecking(ActionEvent event) {
-    setValueForTable(0);
+    Work work = workTable.getSelectionModel().getSelectedItem();
+
+    Alert alertConfirm = new Alert(Alert.AlertType.CONFIRMATION);
+    alertConfirm.setTitle("Cập nhật trạng thái công việc");
+    alertConfirm.setHeaderText("Bạn có chắc chắn muốn cập nhật trạng thái công việc?");
+    alertConfirm.setContentText(work.getWork());
+
+    Optional<ButtonType> option = alertConfirm.showAndWait();
+    if (option.get() == ButtonType.OK) {
+      workDAO.updateWorkStatus(work.getId());
+      Alert alertInfo = new Alert(Alert.AlertType.INFORMATION);
+      alertInfo.setTitle("Cập nhật trạng thái công việc");
+      alertInfo.setHeaderText("Trạng thái công việc đã được cập nhật");
+      alertInfo.setContentText("Công việc đang chờ phê duyệt");
+      alertInfo.showAndWait();
+    } else {
+      return;
+    }
   }
 
   @Override

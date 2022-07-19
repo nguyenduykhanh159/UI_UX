@@ -69,7 +69,7 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Button>
-      <TextField fx:id="idTextField" layoutX="259.0" layoutY="332.0" prefHeight="35.0" prefWidth="432.0">
+      <TextField fx:id="idTextField" layoutX="259.0" layoutY="332.0" prefHeight="35.0" prefWidth="432.0" promptText="Mã số">
          <font>
             <Font size="24.0" />
          </font>

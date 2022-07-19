@@ -1,6 +1,7 @@
 package com.example.ui_ux.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -25,7 +26,7 @@ public class WorkDAO {
       ResultSet resultSet = statement.executeQuery(sql);
       try {
         while(resultSet.next()) {
-          Work work = new Work(resultSet.getString("work").trim(), resultSet.getString("time_start").trim(),
+          Work work = new Work(resultSet.getInt(1), resultSet.getString("work").trim(), resultSet.getString("time_start").trim(),
             resultSet.getString("time_finish").trim(), resultSet.getString("workplace").trim(),
             resultSet.getString("description").trim());
           workList.add(work);
@@ -41,6 +42,20 @@ public class WorkDAO {
     }
 
     return workList;
+  }
+
+  public void updateWorkStatus(int id) {
+    Connection connection = DBConnect.getConnection();
+
+    String sql = "update " + TABLE_WORK + " set status = -1 where id = " + id;
+    try {
+      PreparedStatement preparedStatement = connection.prepareStatement(sql);
+      preparedStatement.executeUpdate();
+    }
+    catch (SQLException e)
+    {
+      e.printStackTrace();
+    }
   }
 
   private void closeStatement(Statement statement) {

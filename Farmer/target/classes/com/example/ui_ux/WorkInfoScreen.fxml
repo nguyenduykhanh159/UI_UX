@@ -69,7 +69,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </RadioButton>
-      <Button fx:id="complete" layoutX="592.0" layoutY="506.0" mnemonicParsing="false" text="Hoàn thành" textFill="#dd3a11">
+      <Button fx:id="complete" layoutX="592.0" layoutY="506.0" mnemonicParsing="false" onAction="#changeChecking" text="Hoàn thành" textFill="#dd3a11">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
